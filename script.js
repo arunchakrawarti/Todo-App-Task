@@ -30,6 +30,15 @@ async function fetchTodos() {
   }
 }
 
+document.getElementById("clearSearch").addEventListener("click", () => {
+  searchInput.value = "";
+  fromDate.value = "";
+  toDate.value = "";
+  currentPage = 1;
+  renderTodos();
+});
+
+
 function renderTodos() {
   let filtered = [...todos];
 
